@@ -6,6 +6,7 @@ from constants import (
     PLAYER_SHOT_SPEED,
     PLAYER_SPEED,
     PLAYER_TURN_SPEED,
+    SHOT_SOUND,
 )
 from shot import Shot
 
@@ -16,6 +17,8 @@ class Player(CircleShape):
 
         self.rotation = 0
         self.cooldown = 0
+        self.shot_sound = pygame.mixer.Sound(SHOT_SOUND)
+        self.shot_sound.set_volume(0.5)
 
     def triangle(self):
         forward = pygame.Vector2(0, 1).rotate(self.rotation)
@@ -54,6 +57,8 @@ class Player(CircleShape):
     def shoot(self):
         if self.cooldown > 0:
             return
+
+        self.shot_sound.play()
         shot = Shot(self.position.x, self.position.y)
         shot.velocity = pygame.Vector2(0, 1).rotate(self.rotation) * PLAYER_SHOT_SPEED
         self.cooldown = PLAYER_SHOOT_COOLDOWN

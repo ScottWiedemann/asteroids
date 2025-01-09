@@ -14,3 +14,8 @@ PLAYER_SHOT_SPEED = 500
 PLAYER_SHOOT_COOLDOWN = 0.3
 
 SHOT_RADIUS = 5
+
+SHOT_SOUND = "./assets/lazer_shot.wav"
+ASTEROID_EXPLOSION_LARGE = "./assets/asteroid_explosion_large.wav"
+ASTEROID_EXPLOSION_MEDIUM = "./assets/asteroid_explosion_medium.wav"
+ASTEROID_EXPLOSION_SMALL = "./assets/asteroid_explosion_small.wav"
