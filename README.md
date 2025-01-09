@@ -2,12 +2,12 @@
 
 ## Description
 
+This is a bare-bones python reimplementation of the classic arcade game Asteroids.
+
 This is a project created by following along on the [boot.dev](https://www.boot.dev/)
 Build Asteroids project course.
 
 I am working through boot.dev to learn python.
-
-This is a bare bones reimplementation of the classic arcade game Asteroids.
 
 ## Getting Started
 
@@ -18,15 +18,23 @@ This is a bare bones reimplementation of the classic arcade game Asteroids.
 ### Installing
 
 ```bash
-git clone git@github.com:ScottWiedemann/bookbot.git
+git clone git@github.com:ScottWiedemann/asteroids.git
 ```
 
 ### Executing program
 
-- Change directories into the cloned repo and run the following commands:
+- Change directory to the cloned repo
+
+- Run the following commands to set up virtual environment and install dependencies:
 
 ```bash
 python3 -m venv venv
 source venv/bin/activate
+pip install -r requirements.txt
+```
+
+- Run the game and enjoy:
+
+```bash
 python3 main.py
 ```
